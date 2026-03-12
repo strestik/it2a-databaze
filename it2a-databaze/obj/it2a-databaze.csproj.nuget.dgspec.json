@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\PRG\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj": {}
+    "C:\\Users\\61824strestik\\Source\\Repos\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj": {}
   },
   "projects": {
-    "H:\\PRG\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj": {
+    "C:\\Users\\61824strestik\\Source\\Repos\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\PRG\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj",
+        "projectUniqueName": "C:\\Users\\61824strestik\\Source\\Repos\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj",
         "projectName": "it2a-databaze",
-        "projectPath": "H:\\PRG\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj",
+        "projectPath": "C:\\Users\\61824strestik\\Source\\Repos\\it2a-databaze\\it2a-databaze\\it2a-databaze.csproj",
         "packagesPath": "C:\\Users\\61824strestik\\.nuget\\packages\\",
-        "outputPath": "H:\\PRG\\it2a-databaze\\it2a-databaze\\obj\\",
+        "outputPath": "C:\\Users\\61824strestik\\Source\\Repos\\it2a-databaze\\it2a-databaze\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

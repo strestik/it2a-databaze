@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("it2a-databaze")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e4a4d6bcc709cf3d5ac1d1533b6ba103dc50a10")]
 [assembly: System.Reflection.AssemblyProductAttribute("it2a-databaze")]
 [assembly: System.Reflection.AssemblyTitleAttribute("it2a-databaze")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:it2a_databaze"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button Content="Přidat položku" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Přidat položku" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Přidat položku" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
 
-    </Grid>
+    </StackPanel>
 </Window>
