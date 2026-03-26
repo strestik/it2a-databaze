@@ -18,13 +18,142 @@ namespace it2a_databaze
     
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Kniha> Knihy { get; set; }
+        public ObservableCollection<Kniha> Knihovna { get; set; }
+
+        private void NactiVychoziKnihy()
+        {
+            Knihovna.Add(new Kniha(
+                "Zaklínač I. - Poslední přání",
+                "Andrzej Sapkowski",
+                "1993",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-77-4"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač II. - Meč osudu",
+                "Andrzej Sapkowski",
+                "1992",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-78-1"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač III. - Krev elfů",
+                "Andrzej Sapkowski",
+                "1994",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-79-8"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač IV. - Čas opovržení",
+                "Andrzej Sapkowski",
+                "1995",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-80-4"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač V. - Křest ohněm",
+                "Andrzej Sapkowski",
+                "1996",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-81-1"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač VI. - Věž vlaštovky",
+                "Andrzej Sapkowski",
+                "1997",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-82-8"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač VII. - Paní jezera",
+                "Andrzej Sapkowski",
+                "1999",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-85951-83-5"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Zaklínač VIII. - Bouřková sezóna",
+                "Andrzej Sapkowski",
+                "2013",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-7477-002-9"
+            ));
+            Knihovna.Add(new Kniha(
+                "Zaklínač IX. - Rozcestí krkavců",
+                "Andrzej Sapkowski",
+                "2025",
+                "Dark Fantasy",
+                "Slovanský mytos",
+                5,
+                Knihovna.Count + 1,
+                "978-80-7477-088-3"
+            ));
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
             DataContext = this;
-            Knihy = new ObservableCollection<Kniha>();
+            Knihovna = new ObservableCollection<Kniha>();
+            NactiVychoziKnihy();
+        }
+        private void PridatKnihu_Click(object sender, RoutedEventArgs e)
+        {
+            if (!int.TryParse(txtRok.Text, out int rok))
+            {
+                MessageBox.Show("Zkontroluj rok!");
+                return;
+            }
+            if (!int.TryParse(txtPocet.Text, out int ks))
+            {
+                MessageBox.Show("Zkontroluj možství!");
+                return;
+            }
+
+            Kniha kniha = new Kniha(
+                txtNazev.Text,
+                txtAutor.Text,
+                rok < 0 ? (rok * (-1)).ToString() + " př. n. l." : rok.ToString(),
+                txtZanr.Text,
+                txtPodzanr.Text,
+                ks,
+                Knihovna.Count + 1,
+                txtISBN.Text
+            );
+
+            Knihovna.Add(kniha);
         }
 
         private void Nacist_Click(object sender, RoutedEventArgs e)
@@ -54,13 +183,13 @@ namespace it2a_databaze
 
                 k.Nazev = txtNazev.Text;
                 k.Autor = txtAutor.Text;
-                k.RokVydani = rok;
+                k.RokVydani = rok.ToString();
                 k.Zanr = txtZanr.Text;
                 k.Podzanr = txtPodzanr.Text;
                 k.Ks = ks;
                 k.ISBN = txtISBN.Text;
 
-                dataGrid.Items.Refresh(); // důležité!
+                dataGrid.Items.Refresh();
             }
         }
 
@@ -68,7 +197,7 @@ namespace it2a_databaze
         {
             if (dataGrid.SelectedItem is Kniha k)
             {
-                Knihy.Remove(k);
+                Knihovna.Remove(k);
             }
         }
 
@@ -83,27 +212,5 @@ namespace it2a_databaze
             txtISBN.Text = "";
         }
 
-        private void PridatKnihu_Click(object sender, RoutedEventArgs e)
-        {
-            if (!int.TryParse(txtRok.Text, out int rok) ||
-                !int.TryParse(txtPocet.Text, out int ks))
-            {
-                MessageBox.Show("Zkontroluj čísla!");
-                return;
-            }
-
-            Kniha kniha = new Kniha(
-                txtNazev.Text,
-                txtAutor.Text,
-                rok,
-                txtZanr.Text,
-                txtPodzanr.Text,
-                ks,
-                Knihy.Count + 1,
-                txtISBN.Text
-            );
-
-            Knihy.Add(kniha);
-        }
     }
 }

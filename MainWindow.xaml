@@ -14,20 +14,20 @@
         </Grid.ColumnDefinitions>
 
         <DataGrid x:Name="dataGrid"
-                ItemsSource="{Binding Knihy}"
+                ItemsSource="{Binding Knihovna}"
                 AutoGenerateColumns="False"
                 Margin="5"
                 Grid.Column="0">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Název" Binding="{Binding Nazev}" Width="6*" />
-                <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" Width="6*" />
+                <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" Width="4*" />
                 <DataGridTextColumn Header="Rok vydání" Binding="{Binding RokVydani}" Width="2*" />
-                <DataGridTextColumn Header="Žánr" Binding="{Binding Zanr}" Width="6*" />
-                <DataGridTextColumn Header="Podžánr" Binding="{Binding Podzanr}" Width="4*" />
+                <DataGridTextColumn Header="Žánr" Binding="{Binding Zanr}" Width="4*" />
+                <DataGridTextColumn Header="Podžánr" Binding="{Binding Podzanr}" Width="3*" />
                 <DataGridTextColumn Header="Ks" Binding="{Binding Ks}" Width="*" />
-                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="2*" />
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="2*" />
+                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="3*" />
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="*" />
 
             </DataGrid.Columns>
         </DataGrid>
