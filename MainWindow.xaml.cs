@@ -109,6 +109,7 @@ namespace it2a_databaze
                 Knihovna.Count + 1,
                 "978-80-7477-002-9"
             ));
+            
             Knihovna.Add(new Kniha(
                 "Zaklínač IX. - Rozcestí krkavců",
                 "Andrzej Sapkowski",
@@ -118,6 +119,149 @@ namespace it2a_databaze
                 5,
                 Knihovna.Count + 1,
                 "978-80-7477-088-3"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Eragon",
+                "Christopher Paolini",
+                "2004",
+                "Fantasy",
+                "YA Fantasy",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7200-978-7"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Eldest",
+                "Christopher Paolini",
+                "2005",
+                "Fantasy",
+                "YA Fantasy",
+                1,
+                Knihovna.Count + 1,
+                "80-253-0220-2"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Brisingr",
+                "Christopher Paolini",
+                "2009",
+                "Fantasy",
+                "YA Fantasy",
+                1,
+                Knihovna.Count + 1,
+                "978-80-253-0775-5"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Inheritance",
+                "Christopher Paolini",
+                "2012",
+                "Fantasy",
+                "YA Fantasy",
+                1,
+                Knihovna.Count + 1,
+                "978-80-253-5860-3"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "The Fork, the Witch, and the Worm",
+                "Christopher Paolini",
+                "2019",
+                "Fantasy",
+                "YA Fantasy",
+                1,
+                Knihovna.Count + 1,
+                "978-80-253-5835-1"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Fractal Noise",
+                "Christopher Paolini",
+                "2023",
+                "Sci-Fi",
+                "Space Opera",
+                1,
+                Knihovna.Count + 1,
+                "978-80-253-6557-1"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Murtagh",
+                "Christopher Paolini",
+                "2024",
+                "Fantasy",
+                "YA Fantasy",
+                1,
+                Knihovna.Count + 1,
+                "978-80-253-7200-5"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Sebrané spisy H. P. Lovecrafta",
+                "H. P. Lovecraft",
+                "2023",
+                "Horor",
+                "Kosmický horor",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7662-201-2"
+            ));
+
+            Knihovna.Add(new Kniha(
+                "Hrobka",
+                "H. P. Lovecraft",
+                "2022",
+                "Horor",
+                "Kosmický horor",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7662-285-2"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Měsíční močál",
+                "H. P. Lovecraft",
+                "2022",
+                "Horor",
+                "Kosmický horor",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7662-291-3"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Volání Cthulhu - Spisy 3/I",
+                "H. P. Lovecraft",
+                "2022",
+                "Horor",
+                "Kosmický horor",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7662-275-3"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Volání Cthulhu - Spisy 3/II",
+                "H. P. Lovecraft",
+                "2023",
+                "Horor",
+                "Kosmický horor",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7662-519-8"
+            ));
+            
+            Knihovna.Add(new Kniha(
+                "Stín z času",
+                "H. P. Lovecraft",
+                "2023",
+                "Horor",
+                "Kosmický horor",
+                1,
+                Knihovna.Count + 1,
+                "978-80-7662-520-4"
             ));
         }
 
