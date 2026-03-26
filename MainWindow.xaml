@@ -1,0 +1,92 @@
+﻿<Window x:Class="it2a_databaze.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:it2a_databaze"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dataGrid"
+                ItemsSource="{Binding }"
+                AutoGenerateColumns="False"
+                Margin="5"
+                Grid.Column="0">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Název" Binding="{Binding }" Width="6*" />
+                <DataGridTextColumn Header="Autor" Binding="{Binding }" Width="6*" />
+                <DataGridTextColumn Header="Rok vydání" Binding="{Binding }" Width="2*" />
+                <DataGridTextColumn Header="Žánr" Binding="{Binding }" Width="6*" />
+                <DataGridTextColumn Header="Podžánr" Binding="{Binding}" Width="4*" />
+                <DataGridTextColumn Header="Ks" Binding="{Binding }" Width="*" />
+                <DataGridTextColumn Header="ISBN" Binding="{Binding }" Width="2*" />
+                <DataGridTextColumn Header="ID" Binding="{Binding }" Width="2*" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Column="1"
+            Margin="5"
+            Padding="10"
+            BorderThickness="1"
+            CornerRadius="5">
+
+            <StackPanel>
+
+                <TextBlock Text="Alexandrie Věčná"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        Margin="0,0,0,15"/>
+
+                <TextBlock Text="Název:"/>
+                <TextBox x:Name="txtNazev" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Autor:"/>
+                <TextBox x:Name="txtAutor" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Rok vydání:"/>
+                <TextBox x:Name="txtRok" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Žánr:"/>
+                <TextBox x:Name="txtZanr" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Podžánr:"/>
+                <TextBox x:Name="txtPodzanr" Margin="0,0,0,8"/>
+
+                <TextBlock Text="Počet kusů:"/>
+                <TextBox x:Name="txtPocet" Margin="0,0,0,8"/>
+
+                <TextBlock Text="ISBN:"/>
+                <TextBox x:Name="txtISBN" Margin="0,0,0,8"/>
+
+                <Button Content="Přidat knihu"
+                    Click="PridatKnihu_Click"
+                    Margin="4"/>
+
+                <Button Content="Načíst vybranou do formuláře"
+                    Click="Nacist_Click"
+                    Margin="4"/>
+
+                <Button Content="Upravit vybranou knihu"
+                    Click="UpravitKnihu_Click"
+                    Margin="4"/>
+
+                <Button Content="Smazat vybranou knihu"
+                    Click="SmazatKnihu_Click"
+                    Margin="4"/>
+
+                <Button Content="Vyčistit formulář"
+                    Click="VymazFormular_Click"
+                    Margin="4"/>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
