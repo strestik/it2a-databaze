@@ -18,3 +18,4 @@ H:\PRG\it2a-databaze\it2a-databaze\obj\Debug\net8.0-windows\refint\it2a-databaze
 H:\PRG\it2a-databaze\it2a-databaze\obj\Debug\net8.0-windows\it2a-databaze.pdb
 H:\PRG\it2a-databaze\it2a-databaze\obj\Debug\net8.0-windows\it2a-databaze.genruntimeconfig.cache
 H:\PRG\it2a-databaze\it2a-databaze\obj\Debug\net8.0-windows\ref\it2a-databaze.dll
+H:\PRG\it2a-databaze\it2a-databaze\obj\Debug\net8.0-windows\it2a-databaze.sourcelink.json

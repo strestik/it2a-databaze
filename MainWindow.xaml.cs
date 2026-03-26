@@ -29,18 +29,58 @@ namespace it2a_databaze
 
         private void Nacist_Click(object sender, RoutedEventArgs e)
         {
+            if (dataGrid.SelectedItem is Kniha k)
+            {
+                txtNazev.Text = k.Nazev;
+                txtAutor.Text = k.Autor;
+                txtRok.Text = k.RokVydani.ToString();
+                txtZanr.Text = k.Zanr;
+                txtPodzanr.Text = k.Podzanr;
+                txtPocet.Text = k.Ks.ToString();
+                txtISBN.Text = k.ISBN;
+            }
         }
 
         private void UpravitKnihu_Click(object sender, RoutedEventArgs e)
         {
+            if (dataGrid.SelectedItem is Kniha k)
+            {
+                if (!int.TryParse(txtRok.Text, out int rok) ||
+                    !int.TryParse(txtPocet.Text, out int ks))
+                {
+                    MessageBox.Show("Zkontroluj čísla!");
+                    return;
+                }
+
+                k.Nazev = txtNazev.Text;
+                k.Autor = txtAutor.Text;
+                k.RokVydani = rok;
+                k.Zanr = txtZanr.Text;
+                k.Podzanr = txtPodzanr.Text;
+                k.Ks = ks;
+                k.ISBN = txtISBN.Text;
+
+                dataGrid.Items.Refresh(); // důležité!
+            }
         }
 
         private void SmazatKnihu_Click(object sender, RoutedEventArgs e)
         {
+            if (dataGrid.SelectedItem is Kniha k)
+            {
+                Knihy.Remove(k);
+            }
         }
 
         private void VymazFormular_Click(object sender, RoutedEventArgs e)
         {
+            txtNazev.Text = "";
+            txtAutor.Text = "";
+            txtRok.Text = "";
+            txtZanr.Text = "";
+            txtPodzanr.Text = "";
+            txtPocet.Text = "";
+            txtISBN.Text = "";
         }
 
         private void PridatKnihu_Click(object sender, RoutedEventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace it2a_databaze
 {
-    class Kniha
+    public class Kniha
     {
         public string Nazev { get; set; }
         public string Autor { get; set; }

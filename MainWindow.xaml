@@ -7,27 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1600">
 
-    <Grid Margin="10">
+    <Grid Margin="10" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
 
         <DataGrid x:Name="dataGrid"
-                ItemsSource="{Binding }"
+                ItemsSource="{Binding Knihy}"
                 AutoGenerateColumns="False"
                 Margin="5"
                 Grid.Column="0">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Název" Binding="{Binding }" Width="6*" />
-                <DataGridTextColumn Header="Autor" Binding="{Binding }" Width="6*" />
-                <DataGridTextColumn Header="Rok vydání" Binding="{Binding }" Width="2*" />
-                <DataGridTextColumn Header="Žánr" Binding="{Binding }" Width="6*" />
-                <DataGridTextColumn Header="Podžánr" Binding="{Binding}" Width="4*" />
-                <DataGridTextColumn Header="Ks" Binding="{Binding }" Width="*" />
-                <DataGridTextColumn Header="ISBN" Binding="{Binding }" Width="2*" />
-                <DataGridTextColumn Header="ID" Binding="{Binding }" Width="2*" />
+                <DataGridTextColumn Header="Název" Binding="{Binding Nazev}" Width="6*" />
+                <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" Width="6*" />
+                <DataGridTextColumn Header="Rok vydání" Binding="{Binding RokVydani}" Width="2*" />
+                <DataGridTextColumn Header="Žánr" Binding="{Binding Zanr}" Width="6*" />
+                <DataGridTextColumn Header="Podžánr" Binding="{Binding Podzanr}" Width="4*" />
+                <DataGridTextColumn Header="Ks" Binding="{Binding Ks}" Width="*" />
+                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}" Width="2*" />
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="2*" />
 
             </DataGrid.Columns>
         </DataGrid>
